@@ -1,0 +1,256 @@
+/* Reset*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header */
+header{
+    height: 100px;
+    background: #036ba7 ;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+text-transform: uppercase;
+color: black;
+font-weight: 200;
+}
+.menu a{
+    color: black;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0 10px;
+    transition: 0.4s;
+}
+.mostrar-menu, 
+.esconder-menu{
+    font-size: 30px;
+    cursor: pointer;
+    display: none; 
+    transition: 0.4s;
+}
+.mostrar-menu{
+    order:1;
+}
+
+.menu a:hover, 
+.mostrar-menu:hover, 
+.esconder-menu:hover{
+    color: rgb(97, 176, 240);
+}
+#check{
+    display: none;
+}
+/*BANNER*/
+#banner{
+    padding: 0 50px;
+    background-image: url(https://www.sccenlared.es/wp-content/uploads/2020/01/Soluciones-de-Ciberseguridad-1100x640.jpg);
+    height: 45vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#banner::before{
+    content: '';
+    background: rgba(116, 212, 241, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 45vh;
+    left: 0;
+}
+
+.contenido-banner{
+    position: relative;
+    color: black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenido-banner h3{
+    font-size: 30px;
+    font-weight: 400;
+    padding: 10px 0;
+}
+
+.contenido-banner h3 span{
+    font-weight: 600;
+}
+
+.boton-empezar{
+    text-decoration: none;
+    color: black;
+    border: 1px solid #036ba7;
+    padding: 20px 40px;
+    align-self: baseline;
+    text-transform: uppercase;
+}
+
+.boton-empezar:hover{
+    background: #0365a7;
+    transition: all 0.4s;
+}
+
+
+/*TEMAS*/
+#temas{
+    padding: 50px 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#temas img{
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#temas div{
+    padding: 30px 30px;
+    height:300px;
+    width: 300px;
+}
+
+#temas div h4{
+    color: #0365a7;
+    font-size: 30px;
+    padding: 15px 0;
+}
+#temas div p{
+    color: black;
+    font-size: 20px;
+}
+
+.boton-saber-mas{
+    display: inline-block;
+    text-decoration: none;
+    color: #0365a7;
+    padding: 10px 30px;
+    border: 3px solid #0365a7;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: all 0.4s;
+}
+
+.boton-saber-mas:hover{
+    background: #0365a7;
+    color: black;
+}
+
+.parrafo{
+    text-align: justify;
+}
+
+
+/*FORMULARIO*/
+#contacto{
+    padding: 150px 0;
+    color: black;
+}
+
+#contacto h4{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+#contact form{
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.datos-form{
+    display: flex;
+}
+
+.datos-form div{
+    padding: 10px;
+    flex: 1;
+}
+
+form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input,
+form textarea{
+    background: #98cdf0;
+    border-radius:  8px;
+    border: 2px solid #0365a7 ;
+    padding: 10px 50px;
+    outline: 0;
+    color: black;
+    width: 100%;
+}
+
+.mensaje{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+footer{
+    background: #98cdf0;
+    color: #0365a7;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.nosotros1{
+    padding: 60px 60;
+}
+/*RESPONSIVE*/
+@media(max-width: 768px){
+    /*header*/
+    .mostrar-menu, 
+    .esconder-menu{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #036ba7;
+        right: -100%;
+        top: 0;
+        text-align: center;
+        padding: 100px 0px;
+        z-index: 100;
+        transition: 0.8s;
+    }
+
+    .menu a{
+        display: block;
+        padding: 20px;
+    }
+
+    .esconder-menu{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+    }
+
+    #check:checked ~ .menu{
+        right: 0;
+    }
+/*RESPONSIVE TEMAS*/
+#temas{
+    flex-direction: column;
+}
+/*FORMULARIO*/
+.datos-form{
+    flex-direction: column;
+}
+
+
+}
+
+
